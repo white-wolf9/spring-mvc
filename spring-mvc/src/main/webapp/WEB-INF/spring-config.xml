@@ -23,6 +23,10 @@
 	    <property name="password" value="hr"/>
 	</bean>
 	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+		<property name = "maxUpLoadSizePerFile" value = "52428800"/>
+	</bean>
+	
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 	     <property name="dataSource" ref="dataSource"/>
 	</bean>

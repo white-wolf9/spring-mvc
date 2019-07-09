@@ -14,6 +14,6 @@
 	 CIty : <input type = "text" name = "city" /> <br/>
 	 <button type = "submit">Register</button>
 </form>
-
+<h1>You have been successfully registered : ${user}</h1>
 </body>
 </html>
