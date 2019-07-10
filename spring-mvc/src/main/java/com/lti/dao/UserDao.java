@@ -19,5 +19,17 @@ public class UserDao {
 	public void addNewUser(User user) {
 		entityManager.persist(user);
 	}
+	
+	public User fetchUser(String email) {
+		return entityManager.find(User.class, email);
+		
+	}
 
+	/*
+	 * public User fetch(String email) {
+	 * 		return entityManagaer.createQuery("select u from User u where u.email  = :em")
+	 * 												.setParameter("em",email)
+	 * 												.getSingleResult();
+	 * }
+	 */
 }

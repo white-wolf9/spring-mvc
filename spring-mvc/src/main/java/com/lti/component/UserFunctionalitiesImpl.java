@@ -19,4 +19,9 @@ public class UserFunctionalitiesImpl implements UserFunctionalities {
 	public void addUser(User user) {
 		userDao.addNewUser(user);
 	}
+	
+	public User fetchUser(String email) {
+		return userDao.fetchUser(email);
+	}
+	
 }

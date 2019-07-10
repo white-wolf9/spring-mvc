@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lti.entity.User;
@@ -58,5 +59,24 @@ public class RegisterController {
 		uF.addUser(user);
 		return "register.jsp";
 	}
+	
+	@RequestMapping(path = "/searchUser.lti", method = RequestMethod.POST)
+	public String execute(@RequestParam("email") String email, Map<String, Object> model) {
+		User user = uF.fetchUser(email);
+		model.put("user", user);
+		return "searchResult.jsp";
+	}
+	
+	/*
+	 * @RequestMapping(path = "/searchUser.lti", method = RequestMethod.POST)
+	 *  public String execute(@RequestParam("email") String email, Map<String, Object> model) {
+	 *  		User user = registerDao.fetch(email);
+	 *  		model.put("userData", user);
+	 *  		return "searchResult.jsp"
+	 *  	}
+	 */
+	
+	
+	
 	
 }
