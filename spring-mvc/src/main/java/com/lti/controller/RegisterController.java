@@ -43,8 +43,19 @@ public class RegisterController {
 			e.printStackTrace();
 		}
 		
-		//uF.addUser(user);
-		//model.put("user", userDTO.getName());
+		//now the code to store the data in the database
+		//instead of the code below , we can use hibernate
+		//like BeanUtils or Objectmapper for automatically 
+		//copying data from object to another
+		User user = new User();
+		user.setName(userDTO.getName());
+		user.setAge(userDTO.getAge());
+		user.setCity(userDTO.getCity());
+		user.setEmail(userDTO.getEmail());
+		user.setProfilePicFilename(filename);
+		System.out.println(user);
+		
+		uF.addUser(user);
 		return "register.jsp";
 	}
 	
