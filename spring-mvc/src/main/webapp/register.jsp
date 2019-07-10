@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method = "post" action="register.lti">
+<form method = "post" action="register.lti" enctype="multipart/form-data">
 	 Name : <input type = "text" name = "name" /> <br/>
 	 Age : <input type = "number" name = "age" /> <br/>
 	 Email : <input type = "email" name = "email" /> <br/>
-	 CIty : <input type = "text" name = "city" /> <br/>
+	 City : <input type = "text" name = "city" /> <br/>
+	 Upload your profile Pic  : <input type = "file" name = "profilePic" /> <br/>
 	 <button type = "submit">Register</button>
 </form>
+
 <h1>You have been successfully registered : ${user}</h1>
 </body>
 </html>

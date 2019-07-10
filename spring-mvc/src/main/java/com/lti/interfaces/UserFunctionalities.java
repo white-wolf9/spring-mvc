@@ -1,6 +1,7 @@
 package com.lti.interfaces;
 
 import com.lti.entity.User;
+import com.lti.entity.UserDTO;
 
 public interface UserFunctionalities {
 

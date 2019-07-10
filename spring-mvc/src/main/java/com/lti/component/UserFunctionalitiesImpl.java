@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.dao.UserDao;
 import com.lti.entity.User;
+import com.lti.entity.UserDTO;
 import com.lti.interfaces.UserFunctionalities;
 
 @Component("userFunc")
