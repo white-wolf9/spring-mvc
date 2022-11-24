@@ -10,7 +10,7 @@
   		<jackson-databind.version>2.9.9</jackson-databind.version>
   		<oracle.version>12.2.0.1</oracle.version>
   		<dbcp2.version>2.6.0</dbcp2.version>
-  		<hibernate-core.version>5.3.0.Final</hibernate-core.version>
+  		<hibernate-core.version>5.3.20.Final</hibernate-core.version>
   		<file-upload.version>1.4</file-upload.version>
   </properties>
   
